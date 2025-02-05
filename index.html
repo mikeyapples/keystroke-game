@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENTENCITY</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>SENTENCITY</h1>
+    <p id="instructions">
+      Edit the sentence in the play area to match the target sentence. Press enter to submit. Be as efficient as possible. Keyboard only!
+    </p>
+    <div id="play-area">
+      <div id="editable-text" contenteditable="true"></div>
+    </div>
+    <div id="target-text"></div>
+    <div id="keystroke-counter">
+      Keystrokes: <span id="keystroke-count">0</span>
+    </div>
+    <div id="perfect-score">
+      Keystroke Target: <span id="perfect-score-value">0</span>
+    </div>
+    <div id="difference">
+      Difference: <span id="difference-value">0</span>
+    </div>
+    <div class="button-group">
+      <button id="start-again">Try Again</button>
+      <button id="next-level">Next Level</button>
+    </div>
+
+    <button id="show-shortcuts">Show Shortcuts</button>
+    <div id="shortcuts" class="hidden">
+      <h2>Keyboard Shortcuts</h2>
+      <ul>
+        <!-- Shortcuts will be added dynamically -->
+      </ul>
+    </div>
+    <!-- Inline result message -->
+    <div id="result-message"></div>
+    <!-- Modal code (retained for potential future use) -->
+    <div id="retry-modal" class="modal hidden">
+      <div class="modal-content">
+        <p id="retry-message"></p>
+         <button class="modal-button" data-action="yes">Yes</button>
+         <button class="modal-button" data-action="no">No</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
