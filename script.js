@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sentencePair = sentencePairs[currentLevel];
     if (currentText === targetText) {
       let diff = keystrokeCount - sentencePair.minMoves;
-      differenceElement.textContent = diff;
+      differenceElement.textContent = (diff >= 0 ? '+' : '') + diff;
       if (diff === 0) {
   resultMessageElement.textContent = "NAILED IT!";
 } else if (diff > 0) {
